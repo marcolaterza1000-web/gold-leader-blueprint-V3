@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 94%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 94%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 94%;
+    --primary: 39 53% 54%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 94%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 39 53% 54%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 94%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 39 53% 54%;
+    --radius: 0.5rem;
+    --gold: 39 53% 54%;
+    --gold-light: 39 60% 65%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    background-color: #0d0d0d;
+  }
+  h1, h2, h3, h4 { font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .font-inter { font-family: 'Inter', sans-serif; }
+
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #c89c4c, #e8c97a, #c89c4c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-gold {
+    box-shadow: 0 0 30px hsl(39 53% 54% / 0.15);
+  }
+
+  .shadow-gold-lg {
+    box-shadow: 0 8px 40px hsl(39 53% 54% / 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .section-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
